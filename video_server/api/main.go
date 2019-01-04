@@ -50,6 +50,7 @@ func Prepare() {
 }
 
 func main() {
+	Prepare()
 	r := RegisterHandlers()
 	mh := NewMiddleWareHandler(r)
 	http.ListenAndServe(":8000", mh)
